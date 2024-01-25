@@ -1,6 +1,8 @@
+# Import necessary modules
 import sys
 import requests
 
+# Recursive function to convert strings to floats in a JSON object
 def convert_strings_to_floats(json_obj):
     if isinstance(json_obj, dict):
         for key, value in json_obj.items():
@@ -15,29 +17,27 @@ def convert_strings_to_floats(json_obj):
             return json_obj
     return json_obj
     
+# Main function to execute the script
 def main(argv):
-    identifier = "coincap.io tracker"
-    type = "Crypto Assets Tracker"
-
+    
+   # Set headers for Data API request
     header_params = {
-        "identifier": identifier,
-        "type": type,
+        "identifier": 'coincap.io tracker',
+        "type": 'Crypto Assets Tracker',
     }
-
-    n = len(argv)
-    if(n >= 2):
-        header_params = {
-            "identifier": argv[0],
-            "type": argv[1],
-        }    
-
+ 
+    # Print header parameters for reference
     print(header_params)
+
+    # Create a session for HTTP requests
     session = requests.Session()
 
+    # Make a GET request to coincap API and convert response to floats
     coincapResponse = session.get("https://api.coincap.io/v2/assets")
     body = convert_strings_to_floats(coincapResponse.json())
-    
+
+    # Send the Data API request with the converted body
     session.put("http://localhost:34567/api/data/parameters", json=body, headers=header_params)
 
 if __name__ == "__main__":
-    main(sys.argv[1:])
+    main()
