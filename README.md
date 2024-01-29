@@ -1,4 +1,4 @@
-# DataAPI-ExampleScripts
+# SLC-C-ExampleScriptedConnectors
 
 This repository contains examples of Scripted Connectors.
 
