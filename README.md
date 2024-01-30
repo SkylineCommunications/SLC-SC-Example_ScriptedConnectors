@@ -1,4 +1,4 @@
-# SLC-C-ExampleScriptedConnectors
+# SLC-SC-Example_Scripted-Connectors
 
 This repository contains examples of Scripted Connectors.
 
