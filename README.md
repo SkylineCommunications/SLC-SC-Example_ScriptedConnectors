@@ -6,6 +6,11 @@ Scripted Connectors offer flexible access to data from any source imaginable, ac
 
 This  functionality has not yet been made available to the general public, but is available as a soft launch option. Follow the steps listed in [Installation and setup](https://aka.dataminer.services/scripted-connectors) to activate this functionality.
 
+Examples include
+
+- **Amsterdam Internet Exchange** : scrapes data from the AMS-IX website for various locations, including Amsterdam, Bay Area, Caribbean, Chicago, Hong Kong, and Mumbai.
+- **Coincap** : fetches data from the CoinCap API, converting certain string values to floats, and sending the modified data to Data API. 
+
 
 # Meta Data (for Skyline Communications)
 
