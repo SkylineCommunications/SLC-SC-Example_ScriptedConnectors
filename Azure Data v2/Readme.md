@@ -17,7 +17,7 @@ Additionally, it conducts counts for the following metrics:
 
 The gathered details, along with the computed counts, are subsequently transmitted to the Data API.
 
-## Requirements
+## Setting it up
 
 1. **App Registration Setup:**
    - Create an app registration in the Azure portal.
