@@ -8,9 +8,9 @@ This  functionality has not yet been made available to the general public, but i
 
 Examples include
 
-- **Amsterdam Internet Exchange** : scrapes data from the AMS-IX website for various locations, including Amsterdam, Bay Area, Caribbean, Chicago, Hong Kong, and Mumbai.
-- **Coincap** : fetches data from the CoinCap API, converting certain string values to floats, and sending the modified data to Data API. 
-
+- [Amsterdam Internet Exchange](Amsterdam%20Internet%20Exchange/README.md) : scrapes data from the AMS-IX website for various locations, including Amsterdam, Bay Area, Caribbean, Chicago, Hong Kong, and Mumbai.
+- [Azure Data v2](Azure%20Data%20v2) : collects data on both active and deallocated Windows Server 2022 VMs in Azure.
+- **Coincap** : fetches data from the CoinCap API, converting certain string values to floats, and sending the modified data to Data API.
 
 # Meta Data (for Skyline Communications)
 
