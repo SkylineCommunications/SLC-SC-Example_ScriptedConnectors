@@ -2,10 +2,15 @@
 
 This repository contains examples of Scripted Connectors.
 
-These connectors can be written using Python or PowerShell. The scripts, in turn, transmit JSON data through a local HTTP call to the Data API. Subsequently, this action initiates the generation of an element through an automatically created connector. The Scripted Connectors are available through the module [Data Sources](https://docs.dataminer.services/user-guide/Advanced_Modules/Data_Sources/Data_Sources.html).
+Scripted Connectors offer flexible access to data from any source imaginable, across hardware, software, and cloud services. These connectors can be written using Python or PowerShell and are available through the module [Data Sources](https://docs.dataminer.services/user-guide/Advanced_Modules/Data_Sources/Data_Sources.html). The scripts, in turn, transmit JSON data through a local HTTP call to the Data API. Subsequently, this action initiates the generation of an element through an automatically created connector.
 
 This  functionality has not yet been made available to the general public, but is available as a soft launch option. Follow the steps listed in [Installation and setup](https://aka.dataminer.services/scripted-connectors) to activate this functionality.
 
+Examples include
+
+- [Amsterdam Internet Exchange](Amsterdam%20Internet%20Exchange) : scrapes data from the AMS-IX website for various locations, including Amsterdam, Bay Area, Caribbean, Chicago, Hong Kong, and Mumbai.
+- [Azure Data v2](Azure%20Data%20v2) : collects data on both active and deallocated Windows Server 2022 VMs in Azure.
+- [Coincap](Coincap) : fetches data from the CoinCap API, converting certain string values to floats, and sending the modified data to Data API.
 
 # Meta Data (for Skyline Communications)
 
