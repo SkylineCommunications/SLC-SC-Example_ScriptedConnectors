@@ -1,3 +1,3 @@
 # Coincap
 
-This Scripted Connector fetches cryptocurrency data from CoinCap API, converts certain string values to floats, and then sends the modified data to Data API endpoint. 
+This Scripted Connector retrieves cryptocurrency asset information from the [CoinCap 2.0 RESTful API](https://docs.coincap.io/). Afterward, it transforms specific string values into floats before transmitting the adjusted data to the Data API endpoint.
