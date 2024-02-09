@@ -18,7 +18,7 @@ def convert_strings_to_floats(json_obj):
     return json_obj
     
 # Main function to execute the script
-def main(argv):
+def main():
     
    # Set headers for Data API request
     header_params = {
