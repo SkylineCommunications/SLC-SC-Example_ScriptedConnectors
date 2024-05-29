@@ -11,6 +11,7 @@ Examples include
 - [Amsterdam Internet Exchange](Amsterdam%20Internet%20Exchange) : scrapes data from the AMS-IX website for various locations, including Amsterdam, Bay Area, Caribbean, Chicago, Hong Kong, and Mumbai.
 - [Azure Data v2](Azure%20Data%20v2) : collects data on both active and deallocated Windows Server 2022 VMs in Azure.
 - [Coincap](Coincap) : fetches data from the CoinCap API, converting certain string values to floats, and sending the modified data to Data API.
+- [Status Page](Status%20Page) : retrieve status information from services using the Atlassian Status Page.
 
 # Meta Data (for Skyline Communications)
 
