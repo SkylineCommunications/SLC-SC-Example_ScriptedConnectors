@@ -1,43 +1,36 @@
 # Advanced Exercise
 
+## Polling the data
 
 Create a data source to poll the status of a networking device
 
-## Polling the data
-
 1. Open the Data Sources module:
-  a. In DataMiner Cube, click Apps in the sidebar to the left and select Data Sources,
-2. Click Create Data Source.
-3. Configure the Data source name field with an identifiable name (e.g. Router Status) and ensure the Type is set to Python.
-4. Create Python script to fetch the response from 
-
-## Configure units and digits
+   1. In DataMiner Cube, click Apps in the sidebar to the left and select Data Sources,
+1. Click Create Data Source.
+1. Configure the Data source name field with an identifiable name (e.g. Router Status) and ensure the Type is set to Python.
+1. Create Python script that
+   1. fetches the response from the URL <https://routersimulation.azurewebsites.net/RouterStatus>
+   1. pushes data to DataMiner with **identifier** = Lab router and **type** = Router Status;
 
 ```python
 
 import requests
 
 def main():
-    # Define the service for which we are checking the status
-    # Example services using this API are GitHub, Dropbox, Discord, Vimeo
-    service = "Dropbox"
-    
-    # Set the base URL of the status page API for the service
-    # Example API URLs for these services are:
-    # https://www.githubstatus.com, https://status.dropbox.com, https://discordstatus.com, https://www.vimeostatus.com/
-    urlapi = "https://status.dropbox.com"
+    # Use this boiler plate code but fill in the URL, type and identifier
 
     # Define header parameters for the request to the local API
     header_params = {
-        "identifier": "router status",
-        "type": "Router Status",
+        "identifier": , 
+        "type":,
     }
     
     # Create a session object to manage and persist settings across requests
     session = requests.Session()
 
     # Send a GET request to the status API to get the current status in JSON format
-    status = session.get("https://routersimulation.azurewebsites.net/RouterStatus")
+    status = session.get("url")
+    
     
     # Send a PUT request to the local Data API with the status data
     # Include the header parameters for additional context
@@ -46,4 +39,41 @@ def main():
 # Execute the main function when the script is run
 if __name__ == "__main__":
     main()
+
 ```
+
+1. Locate the newly created element in the Surveyor.
+1. Verify that the element is being populated with data.
+1. Earn 25 devOps points by showing your badge and the Interface page to one of the assistants in the classroom.
+
+## Configure units and precision
+
+1. Create a data source that will configure the decimal precision & units for the parameters in the following way.
+1.
+1.
+1. Configure the Data source name field with an identifiable name (e.g. Router Status) and ensure the Type is set to Python.
+1. Create Python script that
+   1. fetches the response from the URL <https://routersimulation.azurewebsites.net/RouterStatus>
+   1. pushes data to DataMiner with **identifier** = Lab router and **type** = Router Status;
+
+```json
+
+{
+    "decimals": {
+        "cpuUtilization": 2,
+        "Temperature": 1
+    },
+    "units": {
+        "cpuUtilization": "%",
+        "Temperature": "deg C",
+        "memoryUsage": "%",
+        "Fans" : [
+            {"Speed":"RPM"}
+        ],
+    "Interfaces": [
+        {"Speed":"Mbps"}
+        ]
+    }
+}
+
+```,
