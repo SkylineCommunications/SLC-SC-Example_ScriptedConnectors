@@ -99,8 +99,6 @@ if __name__ == "__main__":
     main()
 
 
-```,
+```
 
-1. Earn 25 devOps points by sending to support.data-acquisition at skyline.be a screenshot of
-    1. the parameters Page
-    1. the Interface page
+Earn 25 DevOps points by emailing screenshots of the Parameters page and the Interface page of the element card to <support.data-acquisition@skyline.be>. Be sure to send them before Thursday, June 13th, 6 PM CEST.
