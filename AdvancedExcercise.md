@@ -4,13 +4,12 @@
 
 Create a data source to poll the status of a networking device
 
-1. Open the Data Sources module:
-   1. In DataMiner Cube, click Apps in the sidebar to the left and select Data Sources,
-1. Click Create Data Source.
-1. Configure the Data source name field with an identifiable name (e.g. Router Status) and ensure the Type is set to Python.
-1. Create Python script that
+1. Open the Data Sources module: In DataMiner Cube, click *Apps* in the sidebar to the left and select *Data Sources*,
+1. Click *Create Data Source*.
+1. Configure the Data source *name* field with an identifiable name (e.g. "Router Status") and ensure the *Type* is set to *Python*.
+1. Create a Python script that
    1. fetches the response from the URL <https://routersimulation.azurewebsites.net/RouterStatus>
-   1. pushes data to DataMiner with **identifier** = Lab router and **type** = Router Status;
+   1. pushes data to DataMiner with **identifier** = *Lab router* and **type** = *Router Status*;
 
 ```python
 
@@ -42,13 +41,26 @@ if __name__ == "__main__":
 
 ```
 
-- [] Locate the newly created element in the Surveyor.
-- [] Verify that the element is being populated with data.
+To verify the results:
+
+- Locate the newly created element in the Surveyor.
+- Verify that the element is being populated with data.
 
 ## Configure units and precision
 
-1. Create a data source that will configure the decimal precision & units for the parameters in the following way.
-1. Configure the Data source name field with an identifiable name (e.g. Units & decimal precision) and ensure the Type is set to Python.
+Create a data source to configure the unis and decimal precision for some parameters in the element *Lab router*.
+
+1. Create a data source.
+1. Configure the Data source *name* field with an identifiable name (e.g. "Units & decimal precision") and ensure the *Type* is set to Python.
+
+   | Parameter Name  | Decimal precision | Units |
+   | ------------- | ------------- |--------|
+   | **cpuUtilization**  | 2  | % |
+   | **Temperature**  | 1  | deg C |
+   | **memoryUsage**  |   | % |
+   | table **Fans**, column **Speed** | | RPM|
+   | table **Interfaces**, column **Speed** | | Mbps|
+
 1. Create Python script that
    1. pushes the decimal and unit configuration
    1. uses the **type** = Router Status.  
@@ -59,11 +71,11 @@ if __name__ == "__main__":
 import requests
 
 def main():
-   # Use this boiler plate code but fill in the URL, type and identifier
+   # Use this boiler plate code but fill in the type, type and identifier
 
     # Define header parameters for the request to the local API
     header_params = {
-       "type": "Router Status",
+       "type": ,
     }
     
     # Create a session object to manage and persist settings across requests
@@ -72,18 +84,18 @@ def main():
 # Configuration to change units and decimal precision    
 config = {
         "decimals": {
-            "cpuUtilization": 2,
-            "Temperature": 2
+            "cpuUtilization": ,
+            "Temperature": 
         },
         "units": {
-            "cpuUtilization": "%",
-            "Temperature": "deg C",
-            "memoryUsage": "%",
+            "cpuUtilization": "",
+            "Temperature": "",
+            "memoryUsage": "",
             "Fans": [
-                {"Speed": "RPM"}
+                {"Speed": ""}
             ],
             "Interfaces": [
-                {"Speed": "Mbps"}
+                {"Speed": ""}
             ]
         }
     }
@@ -99,5 +111,5 @@ if __name__ == "__main__":
 
 
 ```
-
-Earn 25 DevOps points by emailing screenshots of the Parameters page and the Interface page of the element card to <support.data-acquisition@skyline.be>. Be sure to send them before Thursday, June 13th, 6 PM CEST.
+> [!NOTE]
+> **Earn 25 DevOps** points by emailing screenshots of the Parameters page and the Interface page of the element card to <support.data-acquisition@skyline.be>. Be sure to send them before Thursday, June 13th, 6 PM CEST.
