@@ -44,36 +44,63 @@ if __name__ == "__main__":
 
 1. Locate the newly created element in the Surveyor.
 1. Verify that the element is being populated with data.
-1. Earn 25 devOps points by showing your badge and the Interface page to one of the assistants in the classroom.
+1.
 
 ## Configure units and precision
 
 1. Create a data source that will configure the decimal precision & units for the parameters in the following way.
-1.
-1.
-1. Configure the Data source name field with an identifiable name (e.g. Router Status) and ensure the Type is set to Python.
+1. Configure the Data source name field with an identifiable name (e.g. Units & decimal precision) and ensure the Type is set to Python.
 1. Create Python script that
-   1. fetches the response from the URL <https://routersimulation.azurewebsites.net/RouterStatus>
-   1. pushes data to DataMiner with **identifier** = Lab router and **type** = Router Status;
+   1. pushes the decimal and unit configuration
+   1. uses the **type** = Router Status.  
 
-```json
+```python
 
-{
-    "decimals": {
-        "cpuUtilization": 2,
-        "Temperature": 1
-    },
-    "units": {
-        "cpuUtilization": "%",
-        "Temperature": "deg C",
-        "memoryUsage": "%",
-        "Fans" : [
-            {"Speed":"RPM"}
-        ],
-    "Interfaces": [
-        {"Speed":"Mbps"}
-        ]
+
+import requests
+
+def main():
+   # Use this boiler plate code but fill in the URL, type and identifier
+
+    # Define header parameters for the request to the local API
+    header_params = {
+       "type": "Router Status",
     }
-}
+    
+    # Create a session object to manage and persist settings across requests
+    session = requests.Session()
+    
+# Configuration to change units and decimal precision    
+config = {
+        "decimals": {
+            "cpuUtilization": 2,
+            "Temperature": 2
+        },
+        "units": {
+            "cpuUtilization": "%",
+            "Temperature": "deg C",
+            "memoryUsage": "%",
+            "Fans": [
+                {"Speed": "RPM"}
+            ],
+            "Interfaces": [
+                {"Speed": "Mbps"}
+            ]
+        }
+    }
+
+   
+    # Send a PUT request to the local Data API with the status data
+    # Include the header parameters for additional context
+    session.put("http://localhost:34567/api/config", json=config, headers=header_params) 
+
+# Execute the main function when the script is run
+if __name__ == "__main__":
+    main()
+
 
 ```,
+
+1. Earn 25 devOps points by sending to support.data-acquisition at skyline.be a screenshot of
+    1. the parameters Page
+    1. the Interface page
