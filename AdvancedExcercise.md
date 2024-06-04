@@ -42,9 +42,8 @@ if __name__ == "__main__":
 
 ```
 
-1. Locate the newly created element in the Surveyor.
-1. Verify that the element is being populated with data.
-1.
+1. [] Locate the newly created element in the Surveyor.
+1. [] Verify that the element is being populated with data.
 
 ## Configure units and precision
 
