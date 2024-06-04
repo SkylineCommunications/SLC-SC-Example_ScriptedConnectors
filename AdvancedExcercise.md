@@ -74,7 +74,7 @@ Create a data source to configure the unis and decimal precision for some parame
 import requests
 
 def main():
-   # Use this boiler plate code but fill in the type, type and identifier
+    # Use this boiler plate code but fill in the type, type and identifier
 
     # Define header parameters for the request to the local API
     header_params = {
@@ -84,8 +84,8 @@ def main():
     
     # Create a session object to manage and persist settings across requests
     session = requests.Session()
-    
-    # Configuration to change units and decimal precision    
+
+    # Configuration to change units and decimal precision
     config = {
         "decimals": {
             # Fill in the decimal precision
