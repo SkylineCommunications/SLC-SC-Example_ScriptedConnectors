@@ -6,10 +6,10 @@ Create a data source to poll the status of a networking device
 
 1. Open the Data Sources module: In DataMiner Cube, click *Apps* in the sidebar to the left and select *Data Sources*,
 1. Click *Create Data Source*.
-1. Configure the Data source *name* field with an identifiable name (e.g. "Router Status") and ensure the *Type* is set to *Python*.
-1. Create a Python script that
+1. Configure the *Data source name* field with an identifiable name (e.g. Router Status) and ensure the *Type* is set to **Python**.
+1. In the code editor window, create a Python script that
    1. fetches the response from the URL <https://routersimulation.azurewebsites.net/RouterStatus>
-   1. pushes data to DataMiner with **identifier** = *Lab router* and **type** = *Router Status*;
+   1. pushes data to DataMiner with *identifier* = **Lab router** and *type* = **Router Status**;
 
 ```python
 
@@ -20,14 +20,17 @@ def main():
 
     # Define header parameters for the request to the local API
     header_params = {
-        "identifier": , 
-        "type":,
+        # Fill in the identifier
+        "identifier":  , 
+        # Fill in the type
+        "type":, 
     }
     
     # Create a session object to manage and persist settings across requests
     session = requests.Session()
 
     # Send a GET request to the status API to get the current status in JSON format
+    # Fill in URL
     status = session.get("url")
     
     
@@ -75,27 +78,34 @@ def main():
 
     # Define header parameters for the request to the local API
     header_params = {
-       "type": ,
+        # Fill in the type
+        "type": ,
     }
     
     # Create a session object to manage and persist settings across requests
     session = requests.Session()
     
-# Configuration to change units and decimal precision    
-config = {
+    # Configuration to change units and decimal precision    
+    config = {
         "decimals": {
+            # Fill in the decimal precision
             "cpuUtilization": ,
             "Temperature": 
         },
         "units": {
+            # Fill in the units
             "cpuUtilization": "",
             "Temperature": "",
             "memoryUsage": "",
             "Fans": [
-                {"Speed": ""}
+                {
+                    "Speed": ""
+                }
             ],
             "Interfaces": [
-                {"Speed": ""}
+                {
+                    "Speed": ""
+                }
             ]
         }
     }
