@@ -21,9 +21,9 @@ def main():
     # Define header parameters for the request to the local API
     header_params = {
         # Fill in the identifier
-        "identifier":  , 
+        "identifier": "" , 
         # Fill in the type
-        "type":, 
+        "type": "", 
     }
     
     # Create a session object to manage and persist settings across requests
