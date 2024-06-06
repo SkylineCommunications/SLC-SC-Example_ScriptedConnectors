@@ -93,7 +93,7 @@ def main():
             "Temperature": 0
         },
         "units": {           
-            # Fill in the units precision
+            # Fill in the units
             "Cpuutilization": "",
             "Temperature": "",
             "Memoryusage": "",
