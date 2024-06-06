@@ -74,7 +74,7 @@ Create a data source to configure the unis and decimal precision for some parame
 import requests
 
 def main():
-    # Use this boiler plate code but fill in the type, type and identifier
+    # Use this boiler plate code but fill in the type, decimal precision and units
 
     # Define header parameters for the request to the local API
     header_params = {
