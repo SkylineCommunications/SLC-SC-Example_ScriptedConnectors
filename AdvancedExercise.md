@@ -79,7 +79,7 @@ def main():
     # Define header parameters for the request to the local API
     header_params = {
         # Fill in the type
-        "type": ,
+        "type": "",
     }
     
     # Create a session object to manage and persist settings across requests
@@ -89,14 +89,14 @@ def main():
     config = {
         "decimals": {
             # Fill in the decimal precision
-            "cpuUtilization": ,
-            "Temperature": 
+            "Cpuutilization": 0,
+            "Temperature": 0
         },
-        "units": {
-            # Fill in the units
-            "cpuUtilization": "",
+        "units": {           
+            # Fill in the units precision
+            "Cpuutilization": "",
             "Temperature": "",
-            "memoryUsage": "",
+            "Memoryusage": "",
             "Fans": [
                 {
                     "Speed": ""
