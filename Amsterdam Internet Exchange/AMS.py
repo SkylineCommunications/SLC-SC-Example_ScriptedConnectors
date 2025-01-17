@@ -34,7 +34,7 @@ def retrieveValue(location_code):
     final_url = url + location_code
     response = session.get(final_url, headers=header_get)
     soup = BeautifulSoup(response.text, 'html.parser')
-    return soup.find('div', class_='sc-iujRgT').find('div', class_='kqvLeo').get_text().strip()
+    return soup.find('div', class_='sc-gHboQg').find('div', class_='gseimR').get_text().strip()
 
 # Function to correct the numeric value and unit
 def correctValue(value):
