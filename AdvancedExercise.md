@@ -122,4 +122,4 @@ if __name__ == "__main__":
 
 ```
 > [!NOTE]
-> **Earn 25 DevOps** points by emailing screenshots of the Parameters page and the Interface page of the element card to <support.data-acquisition@skyline.be>. Be sure to send them before Thursday, June 13th, 6 PM CEST.
+> **Earn 25 DevOps** points by emailing screenshots of the Parameters page and the Interface page of the element card to <support.data-acquisition@skyline.be>.
