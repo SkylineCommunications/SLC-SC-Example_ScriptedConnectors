@@ -7,7 +7,7 @@ def main():
     
     # Set the base URL of the status page API for the service
     # Example API URLs for these services are:
-    # https://www.githubstatus.com, https://status.dropbox.com, https://discordstatus.com, https://www.vimeostatus.com/
+    # https://www.githubstatus.com, https://status.dropbox.com, https://www.vimeostatus.com/
     urlapi = "https://www.githubstatus.com"
 
     # Define header parameters for the request to the local API
