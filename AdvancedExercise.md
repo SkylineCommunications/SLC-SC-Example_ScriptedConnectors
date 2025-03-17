@@ -121,5 +121,14 @@ if __name__ == "__main__":
 
 
 ```
+
+4. There's no need to configure the units or decimal precision every minute. After the scripted connector has run once, delete the scripted connector or comment the code that performs the HTTP call. 
+  
+```python
+
+# session.put("http://localhost:34567/api/config", json=config, headers=header_params) 
+
+```
+
 > [!NOTE]
 > **Earn 25 DevOps** points by emailing screenshots of the Parameters page and the Interface page of the element card to <support.data-acquisition@skyline.be>.
