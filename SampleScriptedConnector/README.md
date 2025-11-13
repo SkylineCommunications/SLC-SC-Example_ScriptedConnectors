@@ -119,6 +119,3 @@ url_params = {
 - [Skyline DataMiner Data API Documentation](https://docs.dataminer.services/dataminer/Functions/Data_Sources/Data_API.html)
 - [Other Scripted Connectors](../)
 
-## License
-
-See the root [LICENSE](../../LICENSE) file for license information.
